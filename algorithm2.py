@@ -3,6 +3,7 @@ from mrjob.step import MRStep
 import re
 import os
 import sys
+import time
 
 
 class MRMatrixReduceOneStep(MRJob):
@@ -14,12 +15,12 @@ class MRMatrixReduceOneStep(MRJob):
 	def mapper_first_iteration(self, _, line):
 
 		if len(line.split()) == 2:
-			return 
+			return
 
 		i, j, value = line.split()
 		filename = os.environ['map_input_file']
 
-		if filename == 'Matrix1.txt':
+		if filename == sys.argv[-2]:
 			yield j, ('Matrix-identifier-1', i, value)
 		else:
 			yield i, ('Matrix-identifier-2', j, value)
@@ -45,7 +46,12 @@ class MRMatrixReduceOneStep(MRJob):
 	def reducer_second_iteration(self, key, val):
 		yield key, sum(val)
 
+timer_start = time.time()
 
-WORD_RE = re.compile(r"[\w']+")
+WORD_RE = re.compile(r"[c\w']+")
 
 MRMatrixReduceOneStep.run()
+
+timer_end = time.time()
+total_time = timer_end - timer_start
+print(total_time)
