@@ -10,7 +10,7 @@ def convert_vector(file, file_name):
 	dimensions = file.readline().split()
 	rows = int(dimensions[0])
 	cols = int(dimensions[1])
-	if rows != 1 and cols != 1:
+	if rows != 1 and cols != 1 and len(dimensions) == 2:
 		return
 	
 	temp_store = open('temp_output.txt','wb')
@@ -19,6 +19,9 @@ def convert_vector(file, file_name):
 	with file:
 		for line in file:
 			value = line.split()
+
+			if len(value) == 3:
+				return
 
 			x = value[0]
 			magnitude = value[1]

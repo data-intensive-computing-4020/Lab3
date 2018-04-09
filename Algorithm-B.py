@@ -12,13 +12,16 @@ def convert_vector(file, file_name):
 	cols = int(dimensions[1])
 	if rows != 1 and cols != 1:
 		return
-	
+
 	temp_store = open('temp_output.txt','wb')
 	temp_store.write(str(rows) + ' ' + str(cols) + '\r\n')
 
 	with file:
 		for line in file:
 			value = line.split()
+
+			if len(value) == 3:
+				return
 
 			x = value[0]
 			magnitude = value[1]
