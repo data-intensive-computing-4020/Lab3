@@ -10,10 +10,12 @@ def convert_vector(file, file_name):
 	dimensions = file.readline().split()
 	rows = int(dimensions[0])
 	cols = int(dimensions[1])
+	print(rows)
+	print(cols)
 	if rows != 1 and cols != 1:
 		return
 	
-	temp_store = open('output_vector.txt','wb')
+	temp_store = open('temp_output.txt','wb')
 	temp_store.write(str(rows) + ' ' + str(cols) + '\r\n')
 
 	with file:
@@ -32,7 +34,7 @@ def convert_vector(file, file_name):
 	file.close()
 	temp_store.close()
 	
-	with open("output_vector.txt") as file_from:
+	with open("temp_output.txt") as file_from:
 		with open(file_name, "w") as file_to:
 				for line in file_from:
 					file_to.write(line)

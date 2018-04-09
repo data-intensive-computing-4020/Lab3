@@ -6,13 +6,14 @@ import time
 
 
 def convert_vector(file, file_name):
+
 	dimensions = file.readline().split()
 	rows = int(dimensions[0])
 	cols = int(dimensions[1])
 	if rows != 1 and cols != 1:
 		return
 	
-	temp_store = open('output_vector.txt','wb')
+	temp_store = open('temp_output.txt','wb')
 	temp_store.write(str(rows) + ' ' + str(cols) + '\r\n')
 
 	with file:
@@ -27,11 +28,10 @@ def convert_vector(file, file_name):
 			else:
 				temp_store.write('0 ' + x + magnitude + '\r\n')
 	
-	
 	file.close()
 	temp_store.close()
 	
-	with open("output_vector.txt") as file_from:
+	with open("temp_output.txt") as file_from:
 		with open(file_name, "w") as file_to:
 				for line in file_from:
 					file_to.write(line)
@@ -39,7 +39,7 @@ def convert_vector(file, file_name):
 	file.close()
 	temp_store.close()
 
-class MRMatrixReduceOneStep(MRJob):
+class MR_matrix_multiplication_OneStep(MRJob):
 	
     def mapper(self, _, line):
 
@@ -95,8 +95,8 @@ j2, k = matrix_2.readline().split()
 
 checked_dimensions = 0
 
-print('Matrx 1 dimensions: i -> '+ i + ' & j -> ' + j1)
-print('Matrx 2 dimensions: j -> '+ j2 + ' & k -> ' + k)
+print('Matrix 1 dimensions: i -> '+ i + ' & j -> ' + j1)
+print('Matrix 2 dimensions: j -> '+ j2 + ' & k -> ' + k)
 
 if j1 != j2:
 	print('The matrices do not have the correct dimensions to be multiplied')
@@ -107,7 +107,7 @@ j = j1
 matrix_1.close()
 matrix_2.close()
 
-MRMatrixReduceOneStep.run()
+MR_matrix_multiplication_OneStep.run()
 
 time_end = time.time()
 total_time = time_end - time_start
