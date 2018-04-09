@@ -10,8 +10,6 @@ def convert_vector(file, file_name):
 	dimensions = file.readline().split()
 	rows = int(dimensions[0])
 	cols = int(dimensions[1])
-	print(rows)
-	print(cols)
 	if rows != 1 and cols != 1:
 		return
 	
