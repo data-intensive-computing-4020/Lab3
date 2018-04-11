@@ -7,7 +7,7 @@ This lab involved the implementation of 2 algorithms that would achieved matrix 
 1. Naive Iteration One step - This algorithm does matrix multiplication on using one mapper and one reduce function.
 2. Naive Iteration Two step - This algorithm does matrix multiplication on using two mapper and two reduce functions.
 
-Included are 2 more algorithms: Matrix_Generator.py to create square matrices of N x N dimensions and remove_punctuation.py which removes the punctuation from the input textfile and counts sums the elements. The remove_punctuation.py is used to count the number of paths for the graph.
+Included are 2 more algorithms: Matrix_Generator.py to create square matrices of N x N dimensions and remove_punctuation.py which removes the punctuation from the input textfile. The remove_punctuation.py is also used to count the number of paths for the graph by summing the elements.
 
 ### Installation instructions
 
