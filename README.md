@@ -11,7 +11,7 @@ Included are 2 more algorithms: MatrixGenerator.py to create square matrices of 
 
 ### Installation instructions
 
-Prerequisites
+Prerequisites:
 
 Make sure [MrJob](https://github.com/Yelp/mrjob) is installed.
 
@@ -24,5 +24,22 @@ git clone https://github.com/data-intensive-computing-4020/Lab3.git
 
 # Change to the correct directory
 cd Lab3
+
+# To generate an N by N matrix
+python MatrixGenerator.py
+
+# To run Algorithm-A or Algorithm-B
+python <algorithm> <input_matrix_A> <input_matrix_B>
+
+# Example
+python Algorithm-A.py outA1.list outB1.list
+
+# Process for graph matrix (outNetwork.list)
+python <algorithm> outNetwork1.list outNetwork2.list > output.txt
+python remove_punctuation.py output.txt
+# This will generate Matrix_no_punctuation.txt
+python <algorithm> outNetwork1.list Matrix_no_punctuation.txt > output_final.txt
+python remove_punctuation.py output_final.txt
+
 
 ```
