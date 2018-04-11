@@ -15,7 +15,7 @@ In a terminal:
 
 ```bash
 # Prerequisites
-Make sure [MrJob](https://pythonhosted.org/mrjob) is installed 
+Make sure [MrJob](https://www.google.com)
 
 # Clone the Repo
 git clone https://github.com/data-intensive-computing-4020/Lab3.git
