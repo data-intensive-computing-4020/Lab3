@@ -26,7 +26,7 @@ git clone https://github.com/data-intensive-computing-4020/Lab3.git
 cd Lab3
 
 # To generate an N by N matrix
-python MatrixGenerator.py
+python Matrix_Generator.py
 
 # To run Algorithm-A or Algorithm-B
 python <algorithm> <input_matrix_A> <input_matrix_B>
