@@ -14,23 +14,13 @@ Included are 2 more algorithms: MatrixGenerator.py to create square matrices of 
 In a terminal:
 
 ```bash
+# Prerequisites
+Make sure [MrJob](https://pythonhosted.org/mrjob/) is installed 
+
 # Clone the Repo
-git clone https://github.com/data-intensive-computing-4020/Lab2.git
+git clone https://github.com/data-intensive-computing-4020/Lab3.git
 
 # Change to the correct directory
-cd Lab2
-cd Code
-
-# Compile openMP.c
-gcc -o openMP openMP.c -fopenmp -lgomp
-
-# Run openMP executable 
-./openMP
-
-# Compile pThread.c
-gcc -o pThread pThread.c -fopenmp -lgomp -lpthread
-
-# Run openMP executable 
-./pThread
+cd Lab3
 
 ```
