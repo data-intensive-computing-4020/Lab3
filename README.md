@@ -11,11 +11,12 @@ Included are 2 more algorithms: MatrixGenerator.py to create square matrices of 
 
 ### Installation instructions
 
+Prerequisites
+Make sure [MrJob](https://github.com/Yelp/mrjob) is installed.
+
 In a terminal:
 
 ```bash
-# Prerequisites
-Make sure [MrJob] (https://github.com/Yelp/mrjob)
 
 # Clone the Repo
 git clone https://github.com/data-intensive-computing-4020/Lab3.git
