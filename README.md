@@ -37,6 +37,7 @@ python Algorithm-A.py outA1.list outB1.list
 # Process for graph matrix (outNetwork.list)
 python <algorithm> outNetwork1.list outNetwork2.list > output.txt
 python remove_punctuation.py output.txt
+
 # This will generate Matrix_no_punctuation.txt
 python <algorithm> outNetwork1.list Matrix_no_punctuation.txt > output_final.txt
 python remove_punctuation.py output_final.txt
