@@ -12,6 +12,7 @@ Included are 2 more algorithms: MatrixGenerator.py to create square matrices of 
 ### Installation instructions
 
 Prerequisites
+
 Make sure [MrJob](https://github.com/Yelp/mrjob) is installed.
 
 In a terminal:
