@@ -24,6 +24,7 @@ git clone https://github.com/data-intensive-computing-4020/Lab3.git
 
 # Change to the correct directory
 cd Lab3
+cd Code
 
 # To generate an N by N matrix
 python Matrix_Generator.py
